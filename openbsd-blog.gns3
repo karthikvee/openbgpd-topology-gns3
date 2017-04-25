@@ -1,0 +1,364 @@
+{
+    "auto_start": false,
+    "name": "openbsd-blog",
+    "project_id": "63ff7261-2804-4b9e-a4b2-3faea9be02b3",
+    "revision": 4,
+    "topology": {
+        "links": [
+            {
+                "description": "Link from ISP1: ASN 4755 port Ethernet0 to Our Edge Router with OpenBGPD port Ethernet1",
+                "destination_node_id": 24,
+                "destination_port_id": 64,
+                "id": 1,
+                "source_node_id": 22,
+                "source_port_id": 57
+            },
+            {
+                "description": "Link from Our Edge Router with OpenBGPD port Ethernet2 to ISP2: ASN 18101 port Ethernet0",
+                "destination_node_id": 23,
+                "destination_port_id": 60,
+                "id": 2,
+                "source_node_id": 24,
+                "source_port_id": 65
+            },
+            {
+                "description": "Link from ISP1: ASN 4755 port Ethernet1 to Destination port Ethernet0",
+                "destination_node_id": 27,
+                "destination_port_id": 73,
+                "id": 3,
+                "source_node_id": 22,
+                "source_port_id": 58
+            },
+            {
+                "description": "Link from ISP2: ASN 18101 port Ethernet1 to Destination port Ethernet1",
+                "destination_node_id": 27,
+                "destination_port_id": 74,
+                "id": 4,
+                "source_node_id": 23,
+                "source_port_id": 61
+            }
+        ],
+        "nodes": [
+            {
+                "description": "VirtualBox VM",
+                "id": 24,
+                "label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "Our Edge Router with OpenBGPD",
+                    "x": -84.40625,
+                    "y": 79.0
+                },
+                "linked_clone": false,
+                "port_name_format": "Ethernet{0}",
+                "ports": [
+                    {
+                        "adapter_number": 0,
+                        "id": 63,
+                        "name": "Ethernet0",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 1,
+                        "description": "connected to ISP1: ASN 4755 on port Ethernet0",
+                        "id": 64,
+                        "link_id": 1,
+                        "name": "Ethernet1",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 2,
+                        "description": "connected to ISP2: ASN 18101 on port Ethernet0",
+                        "id": 65,
+                        "link_id": 2,
+                        "name": "Ethernet2",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 3,
+                        "id": 66,
+                        "name": "Ethernet3",
+                        "port_number": 0
+                    }
+                ],
+                "properties": {
+                    "acpi_shutdown": false,
+                    "adapter_type": "Intel PRO/1000 MT Desktop (82540EM)",
+                    "adapters": 4,
+                    "console": 5000,
+                    "enable_remote_console": false,
+                    "headless": false,
+                    "name": "Our Edge Router with OpenBGPD",
+                    "ram": 2112,
+                    "use_any_adapter": true,
+                    "vmname": "openbsd-1"
+                },
+                "server_id": 1,
+                "type": "VirtualBoxVM",
+                "vm_id": "5b01195f-1d32-46dd-95b2-cb94c55c23e0",
+                "x": -22.5,
+                "y": 92.5
+            },
+            {
+                "description": "VirtualBox VM",
+                "id": 22,
+                "label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "ISP1: ASN 4755",
+                    "x": -28.1796875,
+                    "y": -25.0
+                },
+                "linked_clone": false,
+                "port_name_format": "Ethernet{0}",
+                "ports": [
+                    {
+                        "adapter_number": 0,
+                        "description": "connected to Our Edge Router with OpenBGPD on port Ethernet1",
+                        "id": 57,
+                        "link_id": 1,
+                        "name": "Ethernet0",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 1,
+                        "description": "connected to Destination on port Ethernet0",
+                        "id": 58,
+                        "link_id": 3,
+                        "name": "Ethernet1",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 2,
+                        "id": 59,
+                        "name": "Ethernet2",
+                        "port_number": 0
+                    }
+                ],
+                "properties": {
+                    "acpi_shutdown": false,
+                    "adapter_type": "Intel PRO/1000 MT Desktop (82540EM)",
+                    "adapters": 3,
+                    "console": 5001,
+                    "enable_remote_console": false,
+                    "headless": false,
+                    "name": "ISP1: ASN 4755",
+                    "ram": 2048,
+                    "use_any_adapter": true,
+                    "vmname": "openbsd-2"
+                },
+                "server_id": 1,
+                "type": "VirtualBoxVM",
+                "vm_id": "ff81e930-8a62-4797-8a59-56b22250fb9f",
+                "x": -250.5,
+                "y": -72.5
+            },
+            {
+                "description": "VirtualBox VM",
+                "id": 23,
+                "label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "ISP2: ASN 18101",
+                    "x": -32.6953125,
+                    "y": -25.0
+                },
+                "linked_clone": false,
+                "port_name_format": "Ethernet{0}",
+                "ports": [
+                    {
+                        "adapter_number": 0,
+                        "description": "connected to Our Edge Router with OpenBGPD on port Ethernet2",
+                        "id": 60,
+                        "link_id": 2,
+                        "name": "Ethernet0",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 1,
+                        "description": "connected to Destination on port Ethernet1",
+                        "id": 61,
+                        "link_id": 4,
+                        "name": "Ethernet1",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 2,
+                        "id": 62,
+                        "name": "Ethernet2",
+                        "port_number": 0
+                    }
+                ],
+                "properties": {
+                    "acpi_shutdown": false,
+                    "adapter_type": "Intel PRO/1000 MT Desktop (82540EM)",
+                    "adapters": 3,
+                    "console": 5002,
+                    "enable_remote_console": false,
+                    "headless": false,
+                    "name": "ISP2: ASN 18101",
+                    "ram": 2112,
+                    "use_any_adapter": true,
+                    "vmname": "openbsd-3"
+                },
+                "server_id": 1,
+                "type": "VirtualBoxVM",
+                "vm_id": "3e887c15-4cd7-4e0d-b005-68e4aa1ba086",
+                "x": 189.5,
+                "y": -64.5
+            },
+            {
+                "description": "VirtualBox VM",
+                "id": 27,
+                "label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "Destination",
+                    "x": -13.9140625,
+                    "y": -25.0
+                },
+                "linked_clone": false,
+                "port_name_format": "Ethernet{0}",
+                "ports": [
+                    {
+                        "adapter_number": 0,
+                        "description": "connected to ISP1: ASN 4755 on port Ethernet1",
+                        "id": 73,
+                        "link_id": 3,
+                        "name": "Ethernet0",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 1,
+                        "description": "connected to ISP2: ASN 18101 on port Ethernet1",
+                        "id": 74,
+                        "link_id": 4,
+                        "name": "Ethernet1",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 2,
+                        "id": 75,
+                        "name": "Ethernet2",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 3,
+                        "id": 76,
+                        "name": "Ethernet3",
+                        "port_number": 0
+                    }
+                ],
+                "properties": {
+                    "acpi_shutdown": false,
+                    "adapter_type": "Intel PRO/1000 MT Desktop (82540EM)",
+                    "adapters": 4,
+                    "console": 5003,
+                    "enable_remote_console": false,
+                    "headless": false,
+                    "name": "Destination",
+                    "ram": 2112,
+                    "use_any_adapter": false,
+                    "vmname": "openbsd-4 Clone"
+                },
+                "server_id": 1,
+                "type": "VirtualBoxVM",
+                "vm_id": "096419db-f076-420d-8460-257adc47f416",
+                "x": -23.5,
+                "y": -193.5
+            }
+        ],
+        "notes": [
+            {
+                "color": "#ff000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "30.0.0.101",
+                "x": 50.37615433949867,
+                "y": 92.4949493661166
+            },
+            {
+                "color": "#ff000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "20.0.0.101",
+                "x": -125.15790027001891,
+                "y": 89.32337649086278
+            },
+            {
+                "color": "#ff000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "30.0.0.100",
+                "x": 180.3122292025696,
+                "y": -4.721825406947978
+            },
+            {
+                "color": "#ff000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "20.0.0.100",
+                "x": -262.5290039756342,
+                "y": -8.964466094067262
+            },
+            {
+                "color": "#ff000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "10.0.0.100",
+                "x": -34.76955262170046,
+                "y": 151.55382386916236
+            },
+            {
+                "color": "#ff000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "ASN XXXX",
+                "x": -40.0,
+                "y": -130.5
+            },
+            {
+                "color": "#ff000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "40.0.0.101",
+                "x": -101.0,
+                "y": -170.5
+            },
+            {
+                "color": "#ff000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "40.0.0.102",
+                "x": -175.0,
+                "y": -68.5
+            },
+            {
+                "color": "#ff000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "40.0.0.103",
+                "x": 37.0,
+                "y": -171.5
+            },
+            {
+                "color": "#ff000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "40.0.0.104",
+                "x": 97.0,
+                "y": -60.5
+            }
+        ],
+        "servers": [
+            {
+                "host": "127.0.0.1",
+                "id": 1,
+                "local": true,
+                "port": 3080,
+                "protocol": "http",
+                "vm": false
+            }
+        ]
+    },
+    "type": "topology",
+    "version": "1.5.3"
+}
